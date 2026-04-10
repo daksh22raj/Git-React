@@ -22,7 +22,7 @@ export default function RepoCard({ repo }) {
 
   return (
     <div className="repo-card">
-      {/* Repo Name */}
+      
       <div className="repo-name">
         <svg
           className="repo-icon"
@@ -50,12 +50,12 @@ export default function RepoCard({ repo }) {
         </a>
       </div>
 
-      {/* Description */}
+     
       {repo.description && (
         <p className="repo-description">{repo.description}</p>
       )}
 
-      {/* Meta */}
+     
       <div className="repo-meta">
         {repo.language && (
           <span className="repo-stat" style={{ gap: 6 }}>

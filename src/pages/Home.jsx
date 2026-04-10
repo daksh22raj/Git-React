@@ -16,12 +16,11 @@ export default function Home({ setSelectedUser }) {
 
   const handleSearchChange = (e) => {
     setQuery(e.target.value);
-    setPage(1); // reset page on new search
+    setPage(1); 
   };
 
   return (
     <>
-      {/* Hero */}
       <section className="hero">
         <div className="hero-badge">
           <span>⚡</span> Live GitHub API
@@ -29,7 +28,6 @@ export default function Home({ setSelectedUser }) {
         <h1>Discover GitHub Developers</h1>
         <p>Search millions of GitHub users and explore their open-source repositories instantly.</p>
 
-        {/* Search */}
         <div className="search-wrapper">
           <svg
             className="search-icon"
@@ -59,7 +57,6 @@ export default function Home({ setSelectedUser }) {
       </section>
 
       <div className="container">
-        {/* Landing state */}
         {!debounced && !loading && (
           <div className="landing-hint">
             <div className="hint-icon">👆</div>
@@ -67,7 +64,6 @@ export default function Home({ setSelectedUser }) {
           </div>
         )}
 
-        {/* Loading */}
         {loading && (
           <div className="loader-container">
             <div className="spinner" />
@@ -75,7 +71,6 @@ export default function Home({ setSelectedUser }) {
           </div>
         )}
 
-        {/* Results */}
         {debounced && !loading && (
           <>
             {data.length > 0 && (
@@ -99,7 +94,6 @@ export default function Home({ setSelectedUser }) {
               </div>
             )}
 
-            {/* Pagination */}
             {data.length > 0 && (
               <div className="pagination">
                 <button

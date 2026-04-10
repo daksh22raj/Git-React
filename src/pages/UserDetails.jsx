@@ -54,7 +54,6 @@ export default function UserDetails({ username, goBack }) {
         ← Back to Search
       </button>
 
-      {/* Profile Header */}
       {user && (
         <div className="profile-header">
           <img
@@ -87,7 +86,6 @@ export default function UserDetails({ username, goBack }) {
         </div>
       )}
 
-      {/* Controls */}
       <div className="controls">
         <select
           id="sort-select"
@@ -126,7 +124,6 @@ export default function UserDetails({ username, goBack }) {
         )}
       </div>
 
-      {/* Section header */}
       {!loading && processedRepos.length > 0 && (
         <div className="section-header">
           <span className="section-title">Repositories</span>
@@ -134,7 +131,6 @@ export default function UserDetails({ username, goBack }) {
         </div>
       )}
 
-      {/* States */}
       {loading && <Loader />}
       {error && <Error message={error} />}
       {!loading && !error && processedRepos.length === 0 && repos.length > 0 && (
@@ -144,7 +140,6 @@ export default function UserDetails({ username, goBack }) {
         <Empty message="This user has no public repositories." />
       )}
 
-      {/* Repo Grid */}
       <div className="grid">
         {processedRepos.map((repo) => (
           <RepoCard key={repo.id} repo={repo} />
